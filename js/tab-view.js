@@ -2385,9 +2385,7 @@ function resolveRequestedView() {
         'settings': 'settings',
         'whatsnew': 'whatsnew',
         'whats-new': 'whatsnew',
-        'help': 'help',
-        'donate': 'donate',
-        'support': 'donate'
+        'help': 'help'
     };
     return viewMap[normalized] || null;
 }
@@ -2632,8 +2630,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ftAllowAccountCreation = document.getElementById('ftAllowAccountCreation');
     const ftMaxAccounts = document.getElementById('ftMaxAccounts');
 
-    const openKofiBtn = document.getElementById('openKofiBtn');
-    const dashboardDonateBtn = document.getElementById('dashboardDonateBtn');
 
     // State for search/sort
     let keywordSearchValue = '';
@@ -2651,32 +2647,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const helpSearchEmpty = document.getElementById('helpSearchEmpty');
     const helpSearchCard = helpSearchInput ? helpSearchInput.closest('.card') : null;
 
-    if (openKofiBtn) {
-        openKofiBtn.addEventListener('click', () => {
-            try {
-                const url = 'https://ko-fi.com/filtertube';
-                if (runtimeAPI?.tabs?.create) {
-                    runtimeAPI.tabs.create({ url });
-                } else {
-                    window.open(url, '_blank', 'noopener,noreferrer');
-                }
-            } catch (error) {
-                console.warn('Tab-View: failed to open Ko-fi link', error);
-            }
-        });
-    }
-
-    if (dashboardDonateBtn) {
-        dashboardDonateBtn.addEventListener('click', () => {
-            try {
-                if (typeof window.switchView === 'function') {
-                    window.switchView('donate');
-                }
-            } catch (error) {
-                console.warn('Tab-View: failed to switch to donate view', error);
-            }
-        });
-    }
 
     try {
         const createDropdownFromSelect = window.UIComponents?.createDropdownFromSelect;
@@ -2732,7 +2702,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let lockGateEl = null;
 
-    const LOCK_ALLOWED_VIEWS = new Set(['help', 'whatsnew', 'donate']);
+    const LOCK_ALLOWED_VIEWS = new Set(['help', 'whatsnew']);
 
     async function sendRuntimeMessage(payload) {
         return new Promise((resolve) => {
@@ -5774,9 +5744,7 @@ function setupNavigation() {
             'kids': 'Kids Mode',
             'settings': 'Settings',
             'whatsnew': 'What’s New',
-            'help': 'Help',
-            'donate': 'Donate',
-            'support': 'Donate'
+            'help': 'Help'
         };
         if (pageTitle && titles[effectiveViewId]) {
             pageTitle.textContent = titles[effectiveViewId];

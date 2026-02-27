@@ -315,7 +315,6 @@ body {
  }
 
  .ft-app-locked #helpView.active,
- .ft-app-locked #donateView.active,
  .ft-app-locked #whatsnewView.active {
      display: block !important;
  }
@@ -870,99 +869,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--ft-space-md);
-}
-
-/* Donate Promo Card */
-.donate-promo-card {
-    margin-top: var(--ft-space-xl);
-    background: linear-gradient(135deg, rgba(192, 57, 43, 0.08) 0%, rgba(192, 57, 43, 0.03) 100%);
-    border: 1px solid rgba(192, 57, 43, 0.15);
-}
-
-.donate-promo-content {
-    display: flex;
-    align-items: center;
-    gap: var(--ft-space-lg);
-    flex-wrap: wrap;
-}
-
-.donate-promo-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(192, 57, 43, 0.1);
-    color: var(--ft-color-brand-primary);
-    flex-shrink: 0;
-}
-
-.donate-promo-text {
-    flex: 1;
-    min-width: 200px;
-}
-
-.donate-promo-text h3 {
-    margin: 0 0 var(--ft-space-xs) 0;
-    font-size: var(--ft-font-size-h3);
-    color: var(--ft-color-text-primary);
-}
-
-.donate-promo-text p {
-    margin: 0;
-    color: var(--ft-color-text-secondary);
-    font-size: var(--ft-font-size-body);
-}
-
-.donate-promo-btn {
-    flex-shrink: 0;
-}
-
-@media (max-width: 600px) {
-    .donate-promo-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .donate-promo-btn {
-        width: 100%;
-    }
-}
-
-/* Support page */
-.support-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--ft-space-sm);
-    flex-wrap: wrap;
-    margin-top: var(--ft-space-md);
-}
-
-.support-actions .btn-secondary {
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.support-kofi-iframe {
-    border: 1px solid var(--ft-color-sem-neutral-border);
-    border-radius: var(--ft-radius-md);
-    width: 100%;
-    background: var(--ft-color-bg-panel);
-    padding: 4px;
-    box-sizing: border-box;
-}
-
-.support-disclaimer {
-    font-size: 13px;
-    color: var(--ft-color-text-secondary);
-    background: var(--ft-color-bg-panel);
-    border: 1px solid var(--ft-color-sem-neutral-border);
-    border-radius: var(--ft-radius-md);
-    padding: 10px 12px;
-    margin-bottom: var(--ft-space-md);
 }
 
 .help-item {
