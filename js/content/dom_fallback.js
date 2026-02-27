@@ -705,7 +705,8 @@ function ensureContentControlStyles(settings) {
     if (settings.hideSubscriptions) {
         rules.push(`
             .yt-simple-endpoint[href^="/feed/subscriptions"],
-            ytd-browse[page-subtype="subscriptions"] {
+            ytd-browse[page-subtype="subscriptions"],
+            #sections > ytd-guide-section-renderer:has(ytd-guide-collapsible-section-entry-renderer) {
                 display: none !important;
             }
         `);
