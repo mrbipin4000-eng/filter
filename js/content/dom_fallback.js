@@ -706,7 +706,7 @@ function ensureContentControlStyles(settings) {
         rules.push(`
             .yt-simple-endpoint[href^="/feed/subscriptions"],
             ytd-browse[page-subtype="subscriptions"],
-            #sections > ytd-guide-section-renderer:has(ytd-guide-collapsible-section-entry-renderer) {
+            #sections > ytd-guide-section-renderer:has(ytd-guide-collapsible-section-entry-renderer):has(a[href^="/@"]):not(:has(a[href="/feed/history"])) {
                 display: none !important;
             }
         `);
