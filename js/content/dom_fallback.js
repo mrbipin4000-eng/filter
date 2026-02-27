@@ -684,11 +684,15 @@ function ensureContentControlStyles(settings) {
         `);
     }
 
-    if (settings.hideExploreTrending) {
+        if (settings.hideExploreTrending) {
         rules.push(`
             .yt-simple-endpoint[href^="/feed/explore"],
             .yt-simple-endpoint[href^="/feed/trending"],
-            ytd-browse[page-subtype="trending"] {
+            ytd-browse[page-subtype="trending"],
+            ytd-browse[page-subtype="explore"],
+            #sections > ytd-guide-section-renderer:has(> #items > ytd-guide-entry-renderer a[href="/feed/explore"]),
+            ytd-mini-guide-entry-renderer:has(a[href="/feed/explore"]),
+            ytd-mini-guide-entry-renderer:has(a[href="/feed/trending"]) {
                 display: none !important;
             }
         `);
