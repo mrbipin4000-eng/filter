@@ -1,0 +1,43 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon-128.png",
+         "16": "icons/icon-16.png",
+         "48": "icons/icon-48.png"
+      },
+      "default_popup": "html/popup.html"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/seed.js" ],
+      "matches": [ "*://*.youtube.com/*", "*://*.youtubekids.com/*" ],
+      "run_at": "document_start",
+      "world": "MAIN"
+   }, {
+      "js": [ "js/shared/identity.js", "js/content/menu.js", "js/content/dom_helpers.js", "js/content/dom_extractors.js", "js/content/dom_fallback.js", "js/content/block_channel.js", "js/content/bridge_injection.js", "js/content/bridge_settings.js", "js/content/handle_resolver.js", "js/content/collab_dialog.js", "js/content/release_notes_prompt.js", "js/content/first_run_prompt.js", "js/content_bridge.js" ],
+      "matches": [ "*://*.youtube.com/*", "*://*.youtubekids.com/*" ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+   } ],
+   "description": "Restore peace of mind to your digital video experience.",
+   "host_permissions": [ "*://*.youtube.com/*", "*://*.youtube-nocookie.com/*", "*://*.youtubekids.com/*" ],
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/IRSp9VueWjrhfVof11tCyR938T8lcVRtjP2rf4NNJtgyzU5QFHUjp/5zqn/qyMeeN0vKdlNG/NZEnmsUX9zNJov917pW8ZujWHjRZrS0FGaHxPpu3dDEFMiWgGsQPY/FEnRBaukun/jPbGGXfYJ0hPfvJ2SVa3R9ec6jtawlBwVeBuFnPDTaupXOYK6Ktm/uwLkEcksbx88FDIuskTcjJi8tRTXWW6Tyjbk3Rn8YRLW2C3RYJoQPTmnZTkZB3uIRlVwQZFPbDH8WgnLhlwwZuw+StzcE/KCS4vZsFnbng51gikcJrE+FIqtioMp65BIzbsfHVgtLZqay+NJrKm87QIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "111",
+   "name": "FilterTube",
+   "permissions": [ "storage", "activeTab", "scripting", "tabs", "downloads" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2.7",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*.youtube.com/*", "*://*.youtubekids.com/*" ],
+      "resources": [ "js/injector.js", "js/filter_logic.js", "js/seed.js", "js/shared/identity.js", "icons/file.svg" ]
+   } ]
+}

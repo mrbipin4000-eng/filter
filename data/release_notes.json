@@ -1,0 +1,244 @@
+[
+  {
+    "_comment": "Shared release notes source for the dashboard What's New tab and the YouTube release banner. Keep entries sorted newest-first by version."
+  },
+  {
+    "version": "3.2.7",
+    "headline": "Category Filters + Quick Block Hover Cross + Mobile 3 Dot UI & Quick Cross Block Support",
+    "summary": "New category filtering, one-tap quick cross block enabled by default",
+    "bannerSummary": "Use new category filters and quick cross block from card hover; and better support for YT Mobile blocking.",
+    "highlights": [
+      "Category Filtering: Block or allow videos by YouTube category (Music, Gaming, Education, etc.)",
+      "Quick Cross Block Default ON: `Show Quick Cross Block button` is enabled by default in v3.2.7 (users can still disable it)",
+      "Mobile Blocking: Better support for YT Mobile blocking for 3 Dot UI & Quick Cross Block currently working on Home Page"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.7"
+  },
+  {
+    "version": "3.2.6",
+    "headline": "UI/UX Beautification & Content-Based Filtering",
+    "summary": "Complete typography improvements with modern design, three new content filters (duration, date, uppercase).",
+    "bannerSummary": "Beautiful new UI with content filters for duration, upload date, and clickbait detection.",
+    "highlights": [
+      "Typography updates: Modern and refined font scale for better readability",
+      "Content-based filters: Duration (longer/shorter/between), upload date (newer/older/between), and uppercase detection (clickbait titles)",
+      "videoMetaMap system: Persistent video metadata storage with intelligent batching (75ms window, 1500 entry cap)",
+      "Dashboard improvements: Surface-specific stats (Main vs Kids), enhanced stat cards, donate promo card"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.6"
+  },
+  {
+    "version": "3.2.5",
+    "headline": "Whitelist Mode Promoted + Stability",
+    "summary": "Whitelist mode is now the primary allow-only path with smarter extraction, playlist safeguards, and reduced CPU usage.",
+    "bannerSummary": "Whitelist mode promoted with cleaner UI, better playlist stability, and Kids support.",
+    "highlights": [
+      "Promoted whitelist mode: wording/UI no longer marked experimental",
+      "3-dot menu cleanup and search-secondary handling for whitelist surfaces",
+      "Multi-source channel extraction with thumbnail anchors and parent containers",
+      "Mode-aware state tracking with confirmation dialogs and bridge optimizations",
+      "Playlist stability: selected rows stay visible; pending identities no longer unhide blocked rows",
+      "Kids mode whitelist support with zero-network architecture"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.5"
+  },
+  {
+    "version": "3.2.4",
+    "headline": "Enhanced Whitelist Mode + Performance Optimizations",
+    "summary": "Significant improvements to experimental whitelist mode with better UX, performance optimizations, and extended Kids mode support.",
+    "bannerSummary": "Whitelist mode gets smarter with cleaner UI, better performance, and Kids support.",
+    "highlights": [
+      "EXPERIMENTAL: Enhanced whitelist mode with 3-dot menu cleanup, intelligent search processing, and mode-aware state tracking",
+      "Performance boost: Bridge-level optimizations and selective processing reduce CPU usage",
+      "UI improvements: Confirmation dialogs prevent accidental data loss when switching modes",
+      "Kids mode support: Whitelist functionality now works on YouTube Kids with zero-network architecture",
+      "Search optimizations: Right-rail watch cards handled intelligently to prevent UI clutter",
+      "Channel extraction: Multi-source identity resolution with thumbnail anchors and parent containers",
+      "Mode switching: Seamless transitions between blocklist/whitelist with intelligent reprocessing"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.4"
+  },
+  {
+    "version": "3.2.3",
+    "headline": "Experimental Whitelist Mode + UI Improvements",
+    "summary": "Alpha release of whitelist mode for 'allow-only' filtering, plus enhanced UI updates and mobile menu support.",
+    "bannerSummary": "Try experimental whitelist mode - hide everything except allowed channels.",
+    "highlights": [
+      "EXPERIMENTAL: Whitelist mode hides all content except explicitly allowed channels/keywords",
+      "Dual filtering modes with easy toggle between blocklist and whitelist in popup and tab view",
+      "Staging migration - switch to blocklist to collect channels, then merge back to whitelist",
+      "Watch page protection in whitelist mode maintains video playback functionality",
+      "Optimistic UI updates hide content instantly with automatic restoration if blocking fails",
+      "Enhanced mobile menu support with proper YouTube mobile renderer handling",
+      "All console logs now gated behind debug flag to reduce production noise"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.3"
+  },
+  {
+    "version": "3.2.2",
+    "headline": "UI/UX Improvements & Debug Gating",
+    "summary": "Optimistic updates, mobile menu support, debug-gated logging, scroll preservation, and state management refinements.",
+    "bannerSummary": "Instant UI feedback, mobile menu polish, and debug-gated logs with stable state handling.",
+    "highlights": [
+      "Optimistic UI updates: content hides instantly with auto-restore if blocking fails",
+      "Enhanced mobile menu support for ytm-menu-popup-renderer with correct renderer tags",
+      "Debug-gated logging via window.__filtertubeDebug",
+      "Scroll preservation during DOM fallback to prevent jarring jumps",
+      "Channel enrichment limits (10 per session) to reduce background requests",
+      "Idle-scheduled rendering with requestIdleCallback and batching",
+      "External reload debouncing with signature comparison to avoid redundant renders",
+      "Selective notifications: 'load' only on signature change; otherwise 'externalUpdate'",
+      "Bridge state management via shared global state"
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.2"
+  },
+  {
+    "version": "3.2.1",
+    "headline": "Lag-Free Processing + Performance Boost",
+    "summary": "Major performance optimizations eliminate UI lag, with excellent results in Chromium browsers and significant improvements in Firefox.",
+    "bannerSummary": "Lag-free filtering with async processing, compiled caching, and batched updates.",
+    "highlights": [
+      "Async DOM processing with main thread yielding prevents browser freezing during heavy filtering.",
+      "Compiled regex and channel filter caching provides O(1) lookups, reducing CPU usage by 60-80%.",
+      "Batched storage updates reduce I/O operations by 70-90% with intelligent 250ms intervals.",
+      "Debounced settings refresh prevents excessive DOM reprocessing.",
+      "Run state management prevents overlapping executions and queues requests properly.",
+      "Chromium browsers: 90%+ lag reduction; Firefox: significant improvements with ongoing optimization."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.1"
+  },
+  {
+    "version": "3.2.0",
+    "headline": "Instant blocking + zero-network Kids",
+    "summary": "3-dot menus show channel names instantly, network requests drop dramatically, and YouTube Kids works entirely offline.",
+    "bannerSummary": "Zero-delay blocking with proactive XHR interception; Kids mode works without any network fetches.",
+    "highlights": [
+      "3-dot menus now show correct channel names instantly—no more 'Fetching...' delays.",
+      "Channel identity comes from intercepted YouTube JSON responses, reducing network calls.",
+      "YouTube Kids works entirely without network fetches for reliable blocking.",
+      "Missing metadata fills in the background at a controlled rate (6-hour cooldown).",
+      "Topic channels (e.g., 'Music - Topic') handled specially without @handles.",
+      "New comprehensive documentation with ASCII and Mermaid flow diagrams."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.2.0"
+  },
+  {
+    "version": "3.1.9",
+    "headline": "Profile-aware backups + lock-gated controls",
+    "summary": "Auto-backup and content controls now respect profile locks/PINs, inherit per-profile settings, and the profile dropdown stays clickable over the lock gate.",
+    "bannerSummary": "Per-profile auto-backup + locked-profile gating; profile selector is always clickable.",
+    "highlights": [
+      "Auto-backup mode/format selectors disable when auto-backup is off or the profile is locked; new profiles inherit auto-backup preferences.",
+      "Auto-backup scheduling now triggers on profile creation and mode/format changes only when auto-backup is enabled for that profile.",
+      "Content-control toggles and backup controls stay disabled/revert when locked; export scope forces active-profile-only for non-master profiles.",
+      "Profile dropdown z-index fix keeps it clickable even when the lock gate banner is visible.",
+      "Docs updated for profile/PIN model, profile-scoped backups, and UI gating rules."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.9"
+  },
+  {
+    "version": "3.1.8",
+    "headline": "Support tab + reliable auto-backups",
+    "summary": "New Support page (Ko-fi) and auto-backups now work reliably on both Chrome and Firefox.",
+    "bannerSummary": "Auto-backups are now cross-browser and overwrite a single latest backup file.",
+    "highlights": [
+      "Added a Support page in the dashboard with Ko-fi embed.",
+      "Auto-backups now overwrite a single rolling file: Downloads/FilterTube Backup/FilterTube-Backup-Latest.json.",
+      "Download strategy is cross-browser (Blob URL when available; data: URL fallback for Chrome MV3 service worker).",
+      "Firefox downloads no longer fail due to data: URL restrictions."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.8"
+  },
+  {
+    "version": "3.1.7",
+    "headline": "YT Kids + Auto-backup support",
+    "summary": "Block channel based content on YT Kids & Auto backups can now be toggled on/off",
+    "bannerSummary": "New setting: enable/disable auto backups. Exports now save into Downloads/FilterTube Export/.",
+    "highlights": [
+      "Added complete Channel & Keyword based blocking on YT Kids it block channels by passive listening to 3 dot menu UI in YT Kids",
+      "Added a Settings toggle to enable/disable auto backups (best-effort; no Save As prompts).",
+      "Auto backups save into Downloads/FilterTube Backup/ with rotation (latest files kept).",
+      "Manual exports now download silently into Downloads/FilterTube Export/."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.7"
+  },
+  {
+    "version": "3.1.6",
+    "headline": "Import/Export support + Release banner",
+    "summary": "Banner CTA now deep-links into the What’s New dashboard, curated cards load from the same JSON, and imports better honor c/ChannelName + merge rules.",
+    "bannerSummary": "Release banner opens the in-extension What’s New tab and import/export now documents the full flow.",
+    "highlights": [
+      "Release notes JSON hydrates both the dashboard cards and the YouTube banner (single source of truth).",
+      "CTA opens tab-view via background messaging so blockers never intercept chrome-extension:// links.",
+      "Import/export doc + code clarify how UC/handle/c/ChannelName inputs normalize before merging."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.6"
+  },
+  {
+    "version": "3.1.5",
+    "headline": "Shorts + Members-only are actually gone",
+    "summary": "Watch page + sidebar now hide Shorts renderers and members-only shelves before they flash, and the toggle state finally sticks.",
+    "bannerSummary": "Members-only + Shorts hiding hardened across watch and sidebar so blocked rows stop resurfacing.",
+    "highlights": [
+      "Sidebar checks /shorts/ hrefs, overlays, and aria-labels before cards render.",
+      "Members-only detection covers compact, watch, and shelf rows with new badges + playlist heuristics.",
+      "Members-only toggle persistence bug fixed so state survives reloads."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.5"
+  },
+  {
+    "version": "3.1.4",
+    "headline": "Dashboard goes responsive",
+    "summary": "Navigation collapses cleanly on mobile, inputs wrap gracefully, and playlist/mix controls get clearer toggles.",
+    "highlights": [
+      "Hamburger nav + overlay for small screens with refined grid spacing.",
+      "Toggles get lighter tracks, centered thumbs, and better dark-mode contrast.",
+      "Mix/Radio chip hides when Mix toggle is on; playlist hiding skips radio items."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.4"
+  },
+  {
+    "version": "3.1.3",
+    "headline": "Help legend makeover",
+    "summary": "Cards, pills, and tooltips document exactly what Exact / Comment / Filter All do, matching the refreshed dashboard styling.",
+    "highlights": [
+      "Help tab shows badge tints and collaboration labels with matching colors.",
+      "Popup + tab search bars align to the same full-width rhythm.",
+      "Content control descriptions move into hover tooltips for clarity."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/releases/tag/v3.1.3"
+  },
+  {
+    "version": "3.1.2",
+    "headline": "Playlist autoplay hardening",
+    "summary": "Autoplay now leaps past blocked playlist rows without flashing them, and sticky hiding survives YouTube reprocessing.",
+    "highlights": [
+      "Next-click only fires when the next playlist row is actually visible.",
+      "Watch playlist panel rows stay hidden even if identity is briefly unresolved.",
+      "3-dot menu closes cleanly after blocking so the miniplayer keeps playing."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/commit/1224715a84c48ee6d3ddd93b13cc62e487574a31"
+  },
+  {
+    "version": "3.1.1",
+    "headline": "Help tab + identity fixes",
+    "summary": "A dedicated Help tab lands in the dashboard while UC ↔ handle ↔ custom URL mapping gets more resilient.",
+    "highlights": [
+      "Help reference documents all toggles, badges, and keyword behaviors.",
+      "Playlist navigation skips blocked rows without playback flashes.",
+      "Handle/custom URL fallback locks onto the correct UC ID more reliably."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/commit/1b2e442831a40c52148bc9ff830c70c2e6aa909c"
+  },
+  {
+    "version": "3.1.0",
+    "headline": "Docs + hybrid filtering clarity",
+    "summary": "Captured the hybrid interception + DOM fallback architecture with diagrams so you know how FilterTube enforces blocks.",
+    "highlights": [
+      "Documented watch-page 3-dot parity with home/search collaborators.",
+      "Catalogued outstanding playlist regressions so fixes stay visible.",
+      "Synced manifests, build tooling, and UI footer with the 3.1.0 bump."
+    ],
+    "detailsUrl": "https://github.com/varshneydevansh/FilterTube/commit/076baa2ecb14a3e8f5bdf420caa1af7096548f15"
+  }
+]
